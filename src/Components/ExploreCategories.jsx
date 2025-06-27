@@ -1,6 +1,7 @@
 import React from 'react';
 import i6 from '../images/i6.png';
 import i7 from '../images/i7.png';
+import i8 from '../images/i8.png';
 function ExploreCategories() {
   return (
     <section className="relative text-white overflow-hidden">
@@ -26,7 +27,7 @@ function ExploreCategories() {
             {
               title: "Pet Services",
               desc: "Grooming, walking, pet-sitting, and more.",
-              image: "/images/pet-services.png",
+              image: `${i8}`,
             },
             {
               title: "Automotive",
