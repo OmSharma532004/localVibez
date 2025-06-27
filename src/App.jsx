@@ -1,8 +1,8 @@
 import React from "react";
 
-import HeroSection from "./components/HeroSection";
-import WhatWeOffer from "./components/WhatWeOffer";
-import ExploreCategories from "./components/ExploreCategories";
+import HeroSection from "./Components/HeroSection";
+import WhatWeOffer from "./Components/WhatWeOffer";
+import ExploreCategories from "./Components/ExploreCategories";
 
 function App() {
   return (
