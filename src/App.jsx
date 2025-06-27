@@ -6,7 +6,7 @@ import ExploreCategories from "./Components/ExploreCategories";
 
 function App() {
   return (
-    <div>
+    <div className=" bg-gradient-to-b from-pink-50 via-white to-blue-50 text-center ">
       {/* <Header /> */}
       <HeroSection />
       <WhatWeOffer />

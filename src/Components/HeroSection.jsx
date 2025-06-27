@@ -21,7 +21,7 @@ function HeroSection() {
 
       {/* Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className="text-5xl md:text-8xl font-bold mb-4">LocalVibez</h1>
+        <h1 className="text-5xl md:text-8xl  font-bold mb-4">LocalVibez</h1>
         <h2 className="text-3xl md:text-6xl font-light mb-6">
           Connect with Your Community
         </h2>
