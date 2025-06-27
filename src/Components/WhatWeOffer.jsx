@@ -92,7 +92,7 @@ function WhatWeOffer() {
   </div>
 
   {/* Row 2 – 2 cards centered */}
-  <div className="flex justify-center gap-6 md:gap-10">
+  <div className="flex flex-wrap justify-center gap-6 md:gap-10">
     {offerData.slice(3).map((offer, index) => (
       <motion.div
         key={index + 3}

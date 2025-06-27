@@ -4,6 +4,8 @@ import HeroSection from "./Components/HeroSection";
 import WhatWeOffer from "./Components/WhatWeOffer";
 import ExploreCategories from "./Components/ExploreCategories";
 import Description from "./Components/Description";
+import AppDownloadSection from "./Components/AppDownload";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Description/>
       <WhatWeOffer />
       <ExploreCategories />
+      <AppDownloadSection/>
+      <Footer/>
       
     </div>
   );

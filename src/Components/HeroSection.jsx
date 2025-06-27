@@ -1,5 +1,5 @@
 import { FaGooglePlay, FaApple } from "react-icons/fa";
-import videoSrc from "../images/hero.mp4"; // Make sure to import your video file
+import videoSrc from "../images/hero.mp4";
 
 function HeroSection() {
   return (
@@ -20,35 +20,37 @@ function HeroSection() {
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-10"></div>
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className="text-5xl md:text-8xl  font-bold mb-4">LocalVibez</h1>
-        <h2 className="text-3xl md:text-6xl font-light mb-6">
-          Connect with Your Community
-        </h2>
-        <p className="text-xl md:text-2xl font-light mb-8 max-w-2xl">
-          Discover local services, connect with neighbors, and support local businesses.
-        </p>
+      <div className="relative z-20 flex items-center justify-center h-full px-4">
+        <div className="text-center text-white max-w-4xl mx-auto">
+          <h1 className="text-4xl sm:text-6xl lg:text-8xl font-bold mb-4">LocalVibez</h1>
+          <h2 className="text-2xl sm:text-4xl lg:text-6xl font-light mb-6">
+            Connect with Your Community
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light mb-10">
+            Discover local services, connect with neighbors, and support local businesses.
+          </p>
 
-        <div className="flex flex-col sm:flex-row gap-4">
-          <a
-            href="https://www.apple.com/in/app-store/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white text-black font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-50 transition flex items-center gap-2"
-          >
-            <FaApple className="text-2xl" />
-            App Store
-          </a>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a
+              href="https://www.apple.com/in/app-store/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-black font-semibold py-3 px-6 sm:px-8 rounded-lg shadow-lg hover:bg-blue-50 transition flex items-center gap-2"
+            >
+              <FaApple className="text-xl sm:text-2xl" />
+              App Store
+            </a>
 
-          <a
-            href="https://play.google.com/store"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white text-black font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-50 transition flex items-center gap-2"
-          >
-            <FaGooglePlay className="text-2xl" />
-            Google Play
-          </a>
+            <a
+              href="https://play.google.com/store"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-black font-semibold py-3 px-6 sm:px-8 rounded-lg shadow-lg hover:bg-blue-50 transition flex items-center gap-2"
+            >
+              <FaGooglePlay className="text-xl sm:text-2xl" />
+              Google Play
+            </a>
+          </div>
         </div>
       </div>
     </section>
