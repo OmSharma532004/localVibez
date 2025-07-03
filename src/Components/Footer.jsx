@@ -147,7 +147,7 @@ const Footer = () => {
         <div className='flex flex-col gap-[40px] bg-zinc-900 p-8 text-white items-center justify-around flex-wrap w-full'>
           <div className='flex bg-zinc-900 gap-[40px] p-8 text-white items-center justify-around flex-wrap w-full'>
             <div className="flex flex-col items-center justify-center">
-              <img src={logo2} alt="Logo" className='w-[200px] md:w-[500px]' />
+              <img src={logo2} alt="Logo" className='w-[200px] rounded-xl md:w-[500px]' />
               {/* <p className="text-lg mt-4">Contact us: 9818873918</p>
               <p className="text-lg">Email: <a href="mailto:om@localvibez.in" className="text-white hover:underline">om@localvibez.in</a></p> */}
             </div>

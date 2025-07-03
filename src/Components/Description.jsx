@@ -1,5 +1,5 @@
 import React from 'react';
-import vibezImage from '../images/logo.png';
+import vibezImage from '../images/cover.png';
 
 const Description = () => {
   return (

@@ -4,12 +4,12 @@ import { FaHome, FaUserAlt, FaPaw, FaCar, FaEllipsisH } from 'react-icons/fa';
 const services = [
   {
     title: 'Home Services',
-    desc: 'Get reliable help for your home with expert cleaning, plumbing repairs, electrical maintenance, pest control, appliance servicing, and handyman tasks—all at your convenience.',
+    desc: 'Get reliable help for your home with expert cleaning, plumbing repairs, electrical maintenance, pest control, and handyman tasks—all at your convenience.',
     icon: <FaHome className="text-5xl text-blue-300 mx-auto mb-4" />,
   },
   {
     title: 'Personal Care',
-    desc: 'Experience personalized wellness with our range of services including salon-quality hair styling, professional makeup, certified fitness training, relaxing massages, and home spa treatments.',
+    desc: 'Experience personalized wellness with our range of services including salon-quality hair styling, certified fitness training, relaxing massages, and home spa treatments.',
     icon: <FaUserAlt className="text-5xl text-blue-300 mx-auto mb-4" />,
   },
   {

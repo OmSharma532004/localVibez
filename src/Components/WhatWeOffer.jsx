@@ -55,7 +55,7 @@ const cardVariants = {
 
 function WhatWeOffer() {
   return (
-    <section className="py-20 px-6 lg:px-8 bg-gradient-to-b from-pink-50 via-white to-blue-50 text-center">
+    <section className="py-20 px-6 lg:px-8 bg-white text-center">
       <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
         What LocalVibez Offers
       </h2>
