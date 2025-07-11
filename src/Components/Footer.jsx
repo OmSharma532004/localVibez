@@ -1,208 +1,61 @@
-import React, { useState } from 'react';
-// import toast from 'react-hot-toast';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaInstagram, FaFacebook, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 import logo2 from '../images/logo2.png';
 import flag from '../images/flag.png';
 
-import { Link } from 'react-router-dom';
-import { FaInstagram, FaFacebook, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
-
 const Footer = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-    city: ''
-  });
-
-  const [errors, setErrors] = useState({});
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newErrors = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-
-    if (!formData.email.trim() || !/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Valid email is required';
-    }
-
-    if (!formData.phone.trim() || !/^[0-9]{10}$/.test(formData.phone)) {
-      newErrors.phone = 'Valid 10-digit phone number is required';
-    }
-
-    setErrors(newErrors);
-
-    if (Object.keys(newErrors).length === 0) {
-    //   toast.success('Thanks, Our team will contact you soon!');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        city: '',
-        message: ''
-      });
-    }
-  };
-
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <footer className="bg-white -mb-[20px] text-black">
-      <div className="mx-auto flex flex-col items-center flex-wrap justify-center">
-        {/* <div className="w-full flex flex-col items-center justify-center md:w-1/2 px-4 mt-12 md:mt-0">
-          {Object.keys(errors).length > 0 && (
-            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-              <ul>
-                {Object.values(errors).map((error, index) => (
-                  <li key={index}>{error}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-          <h2 className="text-5xl font-light text-purple-800 text-center mb-6">Contact Us</h2>
-          <form onSubmit={handleSubmit} className="space-y-6 text-xl font-light md:w-[80vw] mb-[50px]">
-            <div>
-              <label htmlFor="name">Name*</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="email">Email ID*</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="phone">Mobile Number*</label>
-              <input
-                type="tel"
-                id="mobile"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="city">City*</label>
-              <input
-                type="text"
-                id="city"
-                name="city"
-                value={formData.city}
-                onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="message">Comment*</label>
-              <textarea
-                id="comment"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows="4"
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
-              />
-            </div>
-            <div className="flex justify-center">
-              <button type="submit" className="bg-purple-800 text-white text-2xl hover:bg-blue-300 py-2 px-4 rounded">
-                Send us a Query
-              </button>
-            </div>
-          </form>
-        </div> */}
+    <footer className="bg-zinc-900 text-white py-10 px-4">
+      <div className="max-w-7xl mx-auto flex flex-col gap-10">
 
-        <div className='flex flex-col gap-[40px] bg-zinc-900 p-8 text-white items-center justify-around flex-wrap w-full'>
-          <div className='flex bg-zinc-900 gap-[40px] p-8 text-white items-center justify-around flex-wrap w-full'>
-            <div className="flex flex-col items-center justify-center">
-              <img src={logo2} alt="Logo" className='w-[200px] rounded-xl md:w-[500px]' />
-              {/* <p className="text-lg mt-4">Contact us: 9818873918</p>
-              <p className="text-lg">Email: <a href="mailto:om@localvibez.in" className="text-white hover:underline">om@localvibez.in</a></p> */}
-            </div>
+        {/* Top Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left items-start justify-between">
+          {/* Logo */}
+          <div className="flex flex-col items-center md:items-start">
+            <img src={logo2} alt="Logo" className="w-40 md:w-60 rounded-xl" />
+          </div>
 
-            <div className="md:flex md:flex-wrap justify-around md:w-[50%] gap-[20px] px-4">
-              <div className='flex flex-col items-start justify-center'>
-              
-
-                <div className='mt-8 flex flex-col items-center justify-center md:w-[200px]'>
-                  <h2 className="text-2xl font-bold text-white text-center mb-4">Get Connected</h2>
-                  <ul className='flex flex-row'>
-                    <Link to="/" className="hover:text-blue-300"><FaFacebook style={{ fontSize: "2rem" }} className="ml-4" /></Link>
-                    <Link to="/" className="hover:text-blue-300"><FaInstagram style={{ fontSize: "2rem" }} className="ml-4" /></Link>
-                    <Link to="/" className="hover:text-blue-300"><FaLinkedin style={{ fontSize: "2rem" }} className="ml-4" /></Link>
-                    <Link to="/" className="hover:text-blue-300"><FaTwitter style={{ fontSize: "2rem" }} className="ml-4" /></Link>
-                    <Link to="/" className="hover:text-blue-300"><FaYoutube style={{ fontSize: "2rem" }} className="ml-4" /></Link>
-                  </ul>
-                </div>
-              </div>
-
-              <div className='flex flex-col md:items-center md:justify-around'>
-                <div className="mt-8 md:w-[200px]">
-                  <h2 className="text-2xl font-bold text-white font-semibold mb-4">Our Services</h2>
-                  <ul>
-                    <li onClick={() => window.location.href = '/residential'} className="cursor-pointer mb-2 hover:text-blue-300">Home Services</li>
-                    <li onClick={() => window.location.href = '/commercial'} className="cursor-pointer mb-2 hover:text-blue-300">Personal Care</li>
-                    <li onClick={() => window.location.href = '/residential'} className="cursor-pointer mb-2 hover:text-blue-300">Pet Services</li>
-                    <li onClick={() => window.location.href = '/supervisionPage'} className="cursor-pointer mb-2 hover:text-blue-300">Automotive</li>
-                  </ul>
-                </div>
-
-                <div className="mt-8 md:w-[200px]">
-                  <h2 className="text-2xl font-bold text-white font-semibold mb-4">Legal</h2>
-                  <ul>
-                    <li><a href="/privacy" target="_blank" className="hover:text-blue-300">Privacy Policy</a></li>
-                    <li><a href="/disclaimer" target="_blank" className="hover:text-blue-300">Disclaimer Policy</a></li>
-                    <li><a href="#" target="_blank" className="hover:text-blue-300">Affiliate Policy</a></li>
-                    <li><a href="/faq" target="_blank" className="hover:text-blue-300">FAQs</a></li>
-
-                  </ul>
-                </div>
-              </div>
+          {/* Social Links */}
+          <div className="flex flex-col items-center">
+            <h2 className="text-2xl font-semibold mb-4">Get Connected</h2>
+            <div className="flex gap-4">
+              <Link to="/" className="bg-white text-blue-600 p-3 rounded-full hover:scale-110 transition">
+                <FaFacebook className="text-3xl" />
+              </Link>
+              <Link to="https://www.instagram.com/localvibezofficial/" className="bg-white text-pink-600 p-3 rounded-full hover:scale-110 transition">
+                <FaInstagram className="text-3xl" />
+              </Link>
+              <Link to="/" className="bg-white text-blue-500 p-3 rounded-full hover:scale-110 transition">
+                <FaLinkedin className="text-3xl" />
+              </Link>
+              <Link to="/" className="bg-white text-red-600 p-3 rounded-full hover:scale-110 transition">
+                <FaYoutube className="text-3xl" />
+              </Link>
             </div>
           </div>
 
-          {/* Disclaimer */}
-          <div className="w-full flex font-bold flex-col items-center justify-center bg-zinc-900 p-8 text-white">
-            <h3 className="text-2xl font-bold text-white  mb-4">Disclaimer</h3>
-            <p className='mb-4'>Copyright LocalVibez 2025, all rights reserved</p>
-            {/* <p className="text-center">
-              BuildWorX endeavors to ensure that the information and data in this section is correct and complete, but does not accept liability for any error made or omission from this section...
-            </p> */}
-            <p className='mt-4 flex items-center gap-2 text-lg'>Made In <img src={flag} width={40} alt="India" /> With Love</p>
+          {/* Legal Links */}
+          <div className="flex flex-col items-center md:items-start">
+            <h2 className="text-2xl font-semibold mb-4">Legal</h2>
+            <ul className="space-y-2">
+              <li><a href="/privacy" className="hover:text-blue-300" target="_blank">Privacy Policy</a></li>
+              <li><a href="/disclaimer" className="hover:text-blue-300" target="_blank">Disclaimer</a></li>
+              <li><a href="#" className="hover:text-blue-300" target="_blank">Affiliate Policy</a></li>
+              <li><a href="/faq" className="hover:text-blue-300" target="_blank">FAQs</a></li>
+            </ul>
           </div>
         </div>
+
+        {/* Bottom Section - Disclaimer */}
+        <div className="text-center border-t border-zinc-700 pt-6">
+          <h3 className="text-lg font-semibold mb-2">Disclaimer</h3>
+          <p className="text-sm text-gray-300">© 2025 LocalVibez. All rights reserved.</p>
+          <div className="mt-3 flex justify-center items-center gap-2 text-lg">
+            Made In <img src={flag} width={30} alt="India" /> With Love
+          </div>
+        </div>
+
       </div>
     </footer>
   );

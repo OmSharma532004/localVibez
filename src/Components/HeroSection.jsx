@@ -1,7 +1,23 @@
-import { FaGooglePlay, FaApple } from "react-icons/fa";
+import { useEffect } from "react";
+import { FaGooglePlay, FaApple, FaChevronDown } from "react-icons/fa";
 import videoSrc from "../images/hero.mp4";
 
 function HeroSection() {
+  const handleScroll = () => {
+    const nextSection = document.getElementById("next-section");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      window.scrollBy({ top: 100, left: 0, behavior: "smooth" });
+    }, 4000); // 10 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Video */}
@@ -32,7 +48,7 @@ function HeroSection() {
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <a
-              href="https://www.apple.com/in/app-store/"
+              href="/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-black font-semibold py-3 px-6 sm:px-8 rounded-lg shadow-lg hover:bg-blue-50 transition flex items-center gap-2"
@@ -42,7 +58,7 @@ function HeroSection() {
             </a>
 
             <a
-              href="https://play.google.com/store"
+              href="/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-black font-semibold py-3 px-6 sm:px-8 rounded-lg shadow-lg hover:bg-blue-50 transition flex items-center gap-2"
@@ -53,6 +69,18 @@ function HeroSection() {
           </div>
         </div>
       </div>
+
+      {/* Scroll Down Text + Arrow */}
+     <div
+  onClick={handleScroll}
+  className="absolute bottom-6 left-1/2 z-30 cursor-pointer text-white text-center transform -translate-x-1/2 animate-bounce"
+>
+  <div className="flex flex-col items-center justify-center">
+    {/* <p className="text-lg mb-1">Scroll Down</p> */}
+    <FaChevronDown size={28} />
+  </div>
+</div>
+
     </section>
   );
 }

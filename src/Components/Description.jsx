@@ -11,17 +11,17 @@ const Description = () => {
           Connecting Communities, <br /> Empowering Local Lives
         </h1>
 
-        <p className="text-gray-700 font-light text-base sm:text-lg mb-6">
+        <p className="text-gray-700 font-light text-justify text-base sm:text-md mb-6">
           Welcome to <span className="font-semibold text-blue-600">LocalVibez</span>, your go-to platform for discovering trusted services, connecting with neighbors, and supporting local businesses. Whether you're booking a home service, finding a pet sitter, or buying from a nearby shop, LocalVibez makes it all seamless and local-first.
+           At <span className="font-semibold text-blue-600">LocalVibez</span>, we believe strong neighborhoods build stronger cities. Our platform fosters real connections, promotes trust, and brings convenience to your fingertips—whether it's finding help or lending a hand.
+        
         </p>
 
         <button className="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition duration-300">
           Explore Services
         </button>
 
-        <p className="text-gray-700 font-light text-base sm:text-md mt-6">
-          At <span className="font-semibold text-blue-600">LocalVibez</span>, we believe strong neighborhoods build stronger cities. Our platform fosters real connections, promotes trust, and brings convenience to your fingertips—whether it's finding help or lending a hand.
-        </p>
+       
       </div>
 
       {/* Right Image */}
