@@ -10,6 +10,7 @@ import {
   FaSyncAlt,
   FaEnvelope,
 } from "react-icons/fa";
+import Sidebar from "./SidebarPolicies";
 
 const Section = ({ number, icon, title, children }) => (
   <section className="mb-12 px-6 py-6 bg-gray-50 border border-gray-200 rounded-lg shadow-sm">
@@ -26,16 +27,16 @@ const Section = ({ number, icon, title, children }) => (
 const FAQ = ({ question, answer }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="mt-4 rounded-lg overflow-hidden shadow-md">
+    <div className="mt-4 border border-[rgb(30,64,175)] rounded-md transition-all duration-200">
       <div
-        className="bg-[rgb(30,64,175)] px-4 py-3 text-white flex justify-between items-center cursor-pointer"
+        className="px-4 py-3 flex justify-between items-center cursor-pointer bg-white hover:bg-[rgb(240,245,255)]"
         onClick={() => setOpen(!open)}
       >
-        <span className="text-sm font-semibold">{question}</span>
-        <span className="text-white">{open ? "−" : "+"}</span>
+        <span className="text-sm font-medium text-[rgb(30,64,175)]">{question}</span>
+        <span className="text-[rgb(30,64,175)] font-bold">{open ? "−" : "+"}</span>
       </div>
       {open && (
-        <div className="bg-white px-4 py-3 text-gray-700 text-sm border border-t-0 border-gray-200">
+        <div className="bg-white px-4 py-3 text-gray-700 text-sm border-t border-[rgb(30,64,175)]">
           {answer}
         </div>
       )}
@@ -45,7 +46,9 @@ const FAQ = ({ question, answer }) => {
 
 const TermsAndConditionsPage = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-14 text-left font-sans bg-white">
+    <div className="flex">
+      <Sidebar/>
+      <div className="max-w-4xl mx-auto px-6 py-14 text-left font-sans bg-white">
       <header className="mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-2">Terms & Conditions</h1>
         <p className="text-md text-gray-600 mb-1">
@@ -184,6 +187,7 @@ const TermsAndConditionsPage = () => {
       <footer className="text-center text-sm text-gray-500 mt-16 pt-6 border-t">
         © {new Date().getFullYear()} LocalVibez LLP. All rights reserved.
       </footer>
+    </div>
     </div>
   );
 };

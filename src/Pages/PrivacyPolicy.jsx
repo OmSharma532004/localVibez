@@ -13,6 +13,7 @@ import {
   FaSyncAlt,
   FaEnvelope,
 } from "react-icons/fa";
+import Sidebar from "./SidebarPolicies";
 
 const Section = ({ number, icon, title, children }) => (
   <section className="mb-12 px-6 py-6 bg-gray-50 border border-gray-200 rounded-lg shadow-sm">
@@ -28,28 +29,105 @@ const Section = ({ number, icon, title, children }) => (
 
 const FAQ = ({ question, answer }) => {
   const [open, setOpen] = useState(false);
-
   return (
-    <div className="mt-4 rounded-lg overflow-hidden shadow-md">
+    <div className="mt-4 border border-[rgb(30,64,175)] rounded-md transition-all duration-200">
       <div
-        className="bg-[rgb(30,64,175)] px-4 py-3 text-white flex justify-between items-center cursor-pointer"
+        className="px-4 py-3 flex justify-between items-center cursor-pointer bg-white hover:bg-[rgb(240,245,255)]"
         onClick={() => setOpen(!open)}
       >
-        <span className="text-sm font-semibold">{question}</span>
-        <span className="text-white">{open ? "−" : "+"}</span>
+        <span className="text-sm font-medium text-[rgb(30,64,175)]">{question}</span>
+        <span className="text-[rgb(30,64,175)] font-bold">{open ? "−" : "+"}</span>
       </div>
       {open && (
-        <div className="bg-white px-4 py-3 text-gray-700 text-sm border border-t-0 border-gray-200">
+        <div className="bg-white px-4 py-3 text-gray-700 text-sm border-t border-[rgb(30,64,175)]">
           {answer}
         </div>
       )}
     </div>
   );
 };
+const AdditionalSections = () => (
+  <>
+    <Section number="8" icon={<FaGavel />} title="Content Moderation and Takedown">
+      <p>
+        We actively monitor and moderate all public content. Any content flagged by users or detected through automated tools is reviewed promptly. Objectionable, harmful, or illegal content is removed in line with Indian IT Rules.
+      </p>
+      <ul className="list-disc list-inside mt-2 space-y-1">
+        <li>Reports reviewed within 24 hours</li>
+        <li>Content takedown within 72 hours if found violative</li>
+        <li>Repeat offenders may be banned permanently</li>
+      </ul>
+      <FAQ
+        question="What type of content is not allowed?"
+        answer="Hate speech, harassment, adult content, impersonation, misinformation, or anything violating Indian law."
+      />
+      <FAQ
+        question="How can I report a post or user?"
+        answer="Tap the 3-dot menu on any post or profile and choose 'Report'. Our team will review it quickly."
+      />
+    </Section>
+
+    <Section number="9" icon={<FaLock />} title="Cookies and Tracking">
+      <p>
+        We use cookies and similar tracking technologies for analytics, performance monitoring, and to remember user preferences. No third-party advertising cookies are used.
+      </p>
+      <ul className="list-disc list-inside mt-2 space-y-1">
+        <li>Only essential and analytics cookies are stored</li>
+        <li>No intrusive third-party ads or trackers</li>
+        <li>Users can disable cookies via phone/browser settings</li>
+      </ul>
+      <FAQ
+        question="What kind of cookies do you use?"
+        answer="We use cookies for analytics and app functionality, such as login persistence."
+      />
+      <FAQ
+        question="Can I disable cookies?"
+        answer="Yes. You can disable them through your device settings or browser configuration."
+      />
+    </Section>
+
+    <Section number="10" icon={<FaShareAlt />} title="Advertising and Sponsorship">
+      <p>
+        Occasionally, LocalVibez may display promoted posts or sponsored content. Such content is clearly labeled and reviewed internally to ensure it adheres to our content and advertising policies.
+      </p>
+      <ul className="list-disc list-inside mt-2 space-y-1">
+        <li>All sponsored content is labeled as ‘Sponsored’</li>
+        <li>Ads are non-intrusive and region-relevant</li>
+        <li>We do not allow political or adult ads</li>
+      </ul>
+      <FAQ
+        question="Can I sponsor a post on LocalVibez?"
+        answer="Yes, please contact our business team. All promotions must be approved first."
+      />
+    </Section>
+
+    <Section number="11" icon={<FaLock />} title="Data Breach Notification">
+      <p>
+        In the unlikely event of a data breach that compromises personal data, we will notify affected users and authorities within 72 hours and initiate remediation steps immediately.
+      </p>
+      <FAQ
+        question="Will I be informed if my data is leaked?"
+        answer="Yes. We’ll send you a breach alert via email or in-app notification, as per DPDPA requirements."
+      />
+    </Section>
+
+    <Section number="12" icon={<FaShareAlt />} title="International Users">
+      <p>
+        If you access LocalVibez from outside India, your data will be stored on servers within India. By using our services, you consent to this international data transfer and handling.
+      </p>
+      <FAQ
+        question="Do you comply with laws in other countries too?"
+        answer="We comply primarily with Indian law. International users agree to Indian jurisdiction and terms by using the app."
+      />
+    </Section>
+  </>
+);
 
 const PrivacyPolicyPage = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-14 text-left font-sans bg-white">
+    <div className="flex">
+      <Sidebar />
+      <div className="max-w-4xl mx-auto px-6 py-14 text-left font-sans bg-white">
       <header className="mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
         <p className="text-md text-gray-600 mb-1">
@@ -205,7 +283,9 @@ const PrivacyPolicyPage = () => {
         />
       </Section>
 
-      <Section number="8" icon={<FaGavel />} title="Grievance Redressal">
+      <AdditionalSections />
+
+      <Section number="13" icon={<FaGavel />} title="Grievance Redressal">
         <p>
           We are committed to addressing your concerns transparently and fairly. You can contact our Grievance Officer for any privacy or data-related issues.
         </p>
@@ -227,7 +307,7 @@ const PrivacyPolicyPage = () => {
         />
       </Section>
 
-      <Section number="9" icon={<FaSyncAlt />} title="Changes to This Policy">
+      <Section number="14" icon={<FaSyncAlt />} title="Changes to This Policy">
         <p>
           This policy may be updated periodically. We'll always notify you about significant changes and give you the option to review before continuing to use our services.
         </p>
@@ -237,7 +317,7 @@ const PrivacyPolicyPage = () => {
         />
       </Section>
 
-      <Section number="10" icon={<FaLock />} title="Your Consent">
+      <Section number="15" icon={<FaLock />} title="Your Consent">
         <p>
           By using our app, you are agreeing to the practices described in this policy. You may withdraw your consent at any time by uninstalling the app or reaching out to us.
         </p>
@@ -247,7 +327,7 @@ const PrivacyPolicyPage = () => {
         />
       </Section>
 
-      <Section number="11" icon={<FaEnvelope />} title="Contact Us">
+      <Section number="16" icon={<FaEnvelope />} title="Contact Us">
         <p>
           Questions or concerns? Reach out to us at: <br />
           📧{" "}
@@ -268,6 +348,7 @@ const PrivacyPolicyPage = () => {
       <footer className="text-center text-sm text-gray-500 mt-16 pt-6 border-t">
         © {new Date().getFullYear()} LocalVibez LLP. All rights reserved.
       </footer>
+    </div>
     </div>
   );
 };
