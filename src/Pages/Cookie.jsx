@@ -24,9 +24,9 @@ const FAQ = ({ question, answer }) => {
 
 const CookiePolicyPage = () => {
   return (
-   <div className="flex">
+   <div className="flex flex-col md:flex-row min-h-screen">
     <Sidebar />
-     <div className="max-w-4xl mx-auto px-6 py-12 font-sans">
+     <div className="md:ml-64 w-full max-w-4xl mx-auto px-6 py-14 text-left font-sans bg-white">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">Cookie Policy</h1>
       <p className="text-gray-700 mb-6">
         This Cookie Policy explains how LocalVibez uses cookies and similar technologies to recognize you when you visit our app or website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.

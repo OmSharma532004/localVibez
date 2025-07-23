@@ -24,9 +24,9 @@ const FAQ = ({ question, answer }) => {
 
 const CommunityGuidelinesPage = () => {
   return (
-   <div className="flex">
+   <div className="flex flex-col md:flex-row min-h-screen">
     <Sidebar />
-     <div className="max-w-4xl mx-auto px-6 py-12 font-sans">
+     <div className="md:ml-64 w-full max-w-4xl mx-auto px-6 py-14 text-left font-sans bg-white">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">Community Guidelines</h1>
       <p className="text-gray-700 mb-6">
         To keep LocalVibez safe, respectful, and enjoyable, all users are expected to follow these guidelines. These rules are aligned with Indian laws such as the IT Act, 2000 and the IT Rules, 2021. Violating them may result in warnings, content takedown, temporary suspension, permanent bans, or even legal escalation in serious cases.

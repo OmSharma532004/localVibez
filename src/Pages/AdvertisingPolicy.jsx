@@ -24,9 +24,9 @@ const FAQ = ({ question, answer }) => {
 
 const AdvertisingPolicyPage = () => {
   return (
-   <div className="flex">
+   <div className="flex flex-col md:flex-row min-h-screen">
     <Sidebar />
-     <div className="max-w-4xl mx-auto px-6 py-12 font-sans">
+     <div className="md:ml-64 w-full max-w-4xl mx-auto px-6 py-14 text-left font-sans bg-white">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">Advertising Policy</h1>
       <p className="text-gray-700 mb-4">
         LocalVibez welcomes ethical advertising that adds value to our community. All ads must comply with Indian laws (including ASCI Code and DPDPA), be truthful, safe, and transparent. Misleading or harmful ads will be removed immediately.

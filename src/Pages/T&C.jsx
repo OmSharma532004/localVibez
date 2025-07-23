@@ -46,9 +46,9 @@ const FAQ = ({ question, answer }) => {
 
 const TermsAndConditionsPage = () => {
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row min-h-screen">
       <Sidebar/>
-      <div className="max-w-4xl mx-auto px-6 py-14 text-left font-sans bg-white">
+      <div className="md:ml-64 w-full max-w-4xl mx-auto px-6 py-14 text-left font-sans bg-white">
       <header className="mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-2">Terms & Conditions</h1>
         <p className="text-md text-gray-600 mb-1">

@@ -23,9 +23,9 @@ const FaqItem = ({ question, answer }) => {
 
 const FaqPage = () => {
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row min-h-screen">
       <Sidebar />
-      <div className="ml-64 w-full max-w-5xl px-8 py-12 bg-white font-sans">
+      <div className="md:ml-64 w-full max-w-4xl mx-auto px-6 py-14 text-left font-sans bg-white">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h1>
 
         {/* Getting Started */}
