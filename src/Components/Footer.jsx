@@ -21,16 +21,16 @@ const Footer = () => {
           <div className="flex flex-col items-center">
             <h2 className="text-2xl font-semibold mb-4">Get Connected</h2>
             <div className="flex gap-4">
-              <Link to="/" className="bg-white text-blue-600 p-3 rounded-full hover:scale-110 transition">
+              <Link to="https://www.facebook.com/profile.php?id=61579110984444" className="bg-white text-blue-600 p-3 rounded-full hover:scale-110 transition">
                 <FaFacebook className="text-3xl" />
               </Link>
               <a href="https://www.instagram.com/localvibezofficial/" target="_blank" rel="noopener noreferrer" className="bg-white text-pink-600 p-3 rounded-full hover:scale-110 transition">
                 <FaInstagram className="text-3xl" />
               </a>
-              <Link to="/" className="bg-white text-blue-500 p-3 rounded-full hover:scale-110 transition">
+              <Link to="https://www.linkedin.com/company/localvibez/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_companies%3BJVjgjlsvQSeUQ3FSgCrEbA%3D%3D" className="bg-white text-blue-500 p-3 rounded-full hover:scale-110 transition">
                 <FaLinkedin className="text-3xl" />
               </Link>
-              <Link to="/" className="bg-white text-red-600 p-3 rounded-full hover:scale-110 transition">
+              <Link to="https://www.youtube.com/@LocalVibez-q9g" className="bg-white text-red-600 p-3 rounded-full hover:scale-110 transition">
                 <FaYoutube className="text-3xl" />
               </Link>
             </div>
